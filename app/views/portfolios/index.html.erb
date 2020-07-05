@@ -2,7 +2,7 @@
 
 <% @portfolio_items.each do |item| %>
   <h3><%= item.title %></h3>
-  <%= image_tag(item.thumbnail) %>
+  <%= item.thumbnail.nil? ? image_tag("https://via.placeholder.com/300x200") : image_tag(item.thumbnail) %>
   <p><%= item.tagline %></p>
   <p><%= item.body %></p>
   <hr/>

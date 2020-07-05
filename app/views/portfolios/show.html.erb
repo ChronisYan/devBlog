@@ -1,0 +1,15 @@
+<div style="margin-bottom: 2em">
+  <%= link_to("View all posts", portfolios_path) %>
+</div>
+
+<%= @portfolio_item.main_image.nil? ? image_tag("https://via.placeholder.com/300x200") : image_tag(@portfolio_item.main_image) %>
+
+<h1><%= @portfolio_item.title %></h1>
+
+<em><%= @portfolio_item.tagline %></em>
+
+<hr/>
+
+<p><%= @portfolio_item.body %></p>
+
+<%= link_to("edit", edit_portfolio_path(@portfolio_item.id)) %>
